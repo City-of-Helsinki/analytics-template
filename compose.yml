@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  mlops:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GIT_BRANCH: ${GIT_BRANCH:-unspecified}
+        GIT_HEAD: ${GIT_HEAD:-unspecified}
+    container_name: analytics
+    environment:
+      LOG_PREDICTIONS: "true"
+      MODE: ${MODE:-dev}
+    #restart: always
+    ports:
+      - 8888:8888 # jupyterlab
+    volumes:
+      - ./:/app

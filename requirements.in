@@ -1,0 +1,7 @@
+# ML, data processing and other generic requirements
+black
+numpy
+matplotlib
+pandas
+pip-tools
+seaborn
