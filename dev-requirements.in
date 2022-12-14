@@ -1,6 +1,6 @@
 # requirements for the dev environment excluding ML
+pip-tools
 nbdev
 ipykernel
 nb-black
 jupyterlab
-papermill
