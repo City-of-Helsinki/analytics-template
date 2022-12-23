@@ -1,5 +1,5 @@
 # ignore everything in this folder
-*
+raw_data
 # except this file
 !.gitignore
 # and .gitignore files in subfolders
