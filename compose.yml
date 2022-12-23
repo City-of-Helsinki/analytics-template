@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: analytics
     environment:
-      MODE: ${MODE:-dev}
+      MODE: ${MODE:-jupyterlab}
     ports:
       - 8888:8888 # jupyterlab
     volumes:
