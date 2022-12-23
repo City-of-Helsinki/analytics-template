@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data analytics template",
+    "section": "",
+    "text": "Initialize new repository using this template. Use this document as base for your projects documentation.\nThis file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#setup-git-repository-using-template",
+    "href": "index.html#setup-git-repository-using-template",
+    "title": "Data analytics template",
+    "section": "Setup git repository using template",
+    "text": "Setup git repository using template\n\n(Create GitHub account if you do not have one already.\nSign into your GitHub homepage\nGo to github.com/City-of-Helsinki/analytics_template and click the green button that says ‘Use this template’.\nGive your project a name. Do not use the dash symbol ‘-’, but rather the underscore ’_’, because the name of the repo will become the name of your Python module.\nIf you are creating a project for your organization, change the owner of the repo. From the drop down bar, select your organization GitHub account (e.g. City-of-Helsinki). You need to be included as a team member to the GitHub of the organization.\nDefine your project publicity (you can change this later, but most likely you want to begin with a private repo).\nClick ‘Create repository from template’"
+  },
+  {
+    "objectID": "index.html#development-environment-setup",
+    "href": "index.html#development-environment-setup",
+    "title": "Data analytics template",
+    "section": "Development environment setup",
+    "text": "Development environment setup\n\nCodespaces\nIf your organization has Codespaces enabled (requires GitHub Enterprise & Azure subscription), you can do development using Visual Studio Code and you are now ready to begin development. Just launch the repository in a codespace, and a dev container is automatically set up!\n\n\nLocal vscode with python\nOpen cloned repository folder in Visual Studio Code. Try to execute any python script. Virtual environment installation will be prompted.\n\n\nManual installation in local environment:\n\nCreate virtual environment: python3 -m venv venv\nActivate virtualenv: source venv/bin/activate\nInstall pip-tools: pip install pip-tools\nCompile requirements: pip-compile --upgrade --generate-hashes --allow-unsafe --resolver=backtracking -o requirements.txt requirements.in dev-requirements.in\nInstall requirements: pip-sync requirements.txt\nCreate an ipython kernel for running the notebooks: python -m ipykernel install --user --name python38myenv"
+  },
+  {
+    "objectID": "index.html#nbdev",
+    "href": "index.html#nbdev",
+    "title": "Data analytics template",
+    "section": "Nbdev",
+    "text": "Nbdev\n\nUsing shared python code between notebooks\nUse nbdev_export to export your python modules for other notebooks to use.\n\n\nBefore committing\nRun nbdev_clean to remove metadata from notebooks for cleaner commits."
+  },
+  {
+    "objectID": "index.html#dependencies",
+    "href": "index.html#dependencies",
+    "title": "Data analytics template",
+    "section": "Dependencies",
+    "text": "Dependencies\nAdd library dependencies to requirements/requirements and use pip-compile to construct requirement.txt. File dev-requirements.in is intended for project development environment requirements. Use update_requirements.sh to compile requirements.txt."
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "Data analytics template",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "Insert header for your data analytics study",
+    "section": "",
+    "text": "1"
+  }
+]
