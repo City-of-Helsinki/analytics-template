@@ -76,6 +76,22 @@ python script. Virtual environment installation will be prompted.
 
 # Development
 
+## Data
+
+Store your local data under data-folder. It is excluded from version
+control to keep your data safe.
+
+## Notebooks
+
+Do your analytisc work in nbs/00_core.ipynb Define your readme in
+nbs/index.ipynb
+
+## Readme
+
+Compile index-notebook to readme using command:
+
+        nbdev_readme
+
 ## Nbdev
 
 ### Using shared python code between notebooks
@@ -83,9 +99,13 @@ python script. Virtual environment installation will be prompted.
 Use nbdev_export to export your python modules for other notebooks to
 use.
 
+        nbdev_export
+
 ### Before committing
 
 Run nbdev_clean to remove metadata from notebooks for cleaner commits.
+
+        nbdev_clean
 
 ## Dependencies
 

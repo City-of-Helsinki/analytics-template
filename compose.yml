@@ -1,15 +1,13 @@
 version: "3.8"
 services:
-  mlops:
+  jupyterlab:
     build:
       context: .
-      dockerfile: Dockerfile
-      args:
-        GIT_BRANCH: ${GIT_BRANCH:-unspecified}
-        GIT_HEAD: ${GIT_HEAD:-unspecified}
+      dockerfile: Dockerfile        
     container_name: analytics
     environment:
       MODE: ${MODE:-dev}
+      JUPYTER_LAB_PASSWORD: jlpasswd
     #restart: always
     ports:
       - 8888:8888 # jupyterlab
