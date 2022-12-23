@@ -1,9 +1,0 @@
-project:
-  output-dir: docs
-
-website:
-  title: "analytics_template"
-  site-url: "https://City-of-Helsinki.github.io/analytics_template/"
-  description: "Template for reproducible and explainable ML projects."
-  repo-branch: master
-  repo-url: "https://github.com/City-of-Helsinki/analytics_template/tree/master/"

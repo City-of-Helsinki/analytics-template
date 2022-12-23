@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "analytics_template"
+  site-url: "https://Datahel.github.io/analytics_template"
+  description: "Analytics-template"
+  repo-branch: main
+  repo-url: "https://github.com/Datahel/analytics_template"

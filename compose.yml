@@ -9,7 +9,6 @@ services:
         GIT_HEAD: ${GIT_HEAD:-unspecified}
     container_name: analytics
     environment:
-      LOG_PREDICTIONS: "true"
       MODE: ${MODE:-dev}
     #restart: always
     ports:
