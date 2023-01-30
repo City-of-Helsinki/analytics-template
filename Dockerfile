@@ -27,4 +27,4 @@ RUN nbdev_install_quarto
 # for running the workflow
 RUN python -m ipykernel install --user --name $(python3 --version | tr -d '[:space:]')
 
-ENTRYPOINT ["/bin/bash", "./entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "./entrdocypoint.sh"]
