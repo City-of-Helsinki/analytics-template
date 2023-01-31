@@ -14,7 +14,7 @@
 
 	"workspaceFolder": "/app",
 
-	"service": "mlops",
+	"service": "analytics",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
