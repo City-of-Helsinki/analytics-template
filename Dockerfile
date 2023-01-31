@@ -14,7 +14,7 @@ COPY . /app
 
 WORKDIR /app
 
-# RUN python -m pip install -U pip
+RUN python -m pip install -U pip
 
 RUN python -m pip install pip-tools
 

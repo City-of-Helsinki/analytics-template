@@ -4,3 +4,4 @@ nbdev
 ipykernel
 nb-black
 jupyterlab
+pre-commit
