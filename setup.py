@@ -1,7 +1,18 @@
+import pathlib
+from typing import List
+
+import pkg_resources
 from pkg_resources import parse_version
 from configparser import ConfigParser
 import setuptools
 assert parse_version(setuptools.__version__)>=parse_version('36.2')
+from os.path import exists
+
+# Dynamically generate list of requirements from requirements file
+def get_requirements(requirements_file) -> List[str]:
+    with pathlib.Path(requirements_file).open() as requirements:
+        requirements_list = pkg_resources.parse_requirements(requirements)
+        return [str(r) for r in requirements_list]
 
 # note: all settings are in settings.ini; edit there, not here
 config = ConfigParser(delimiters=['='])
@@ -22,13 +33,17 @@ licenses = {
 }
 statuses = [ '1 - Planning', '2 - Pre-Alpha', '3 - Alpha',
     '4 - Beta', '5 - Production/Stable', '6 - Mature', '7 - Inactive' ]
-py_versions = '3.6 3.7 3.8 3.9 3.10'.split()
+py_versions = '3.6 3.7 3.8 3.9 3.10 3.11'.split()
 
 requirements = cfg.get('requirements','').split()
 if cfg.get('pip_requirements'): requirements += cfg.get('pip_requirements','').split()
 min_python = cfg['min_python']
 lic = licenses.get(cfg['license'].lower(), (cfg['license'], None))
 dev_requirements = (cfg.get('dev_requirements') or '').split()
+dev_requirements_file = cfg.get('dev_requirements_file') or ''
+# Check if dev_requirements is file
+if exists(dev_requirements_file):
+    dev_requirements += get_requirements(dev_requirements_file)
 
 setuptools.setup(
     name = cfg['lib_name'],
@@ -53,5 +68,3 @@ setuptools.setup(
         'nbdev': [f'{cfg.get("lib_path")}={cfg.get("lib_path")}._modidx:d']
     },
     **setup_cfg)
-
-
