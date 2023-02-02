@@ -1,10 +1,6 @@
-name: CI
-on:  [workflow_dispatch, pull_request, push]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: fastai/workflows/nbdev-ci@master
-        with:
-          version: '3.11'
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
