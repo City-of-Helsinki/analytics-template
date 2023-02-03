@@ -7,4 +7,4 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: actions/analytics_template@main
+        uses: analytics_template@main
