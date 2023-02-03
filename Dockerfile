@@ -25,7 +25,7 @@ RUN pip install -r requirements.txt
 RUN nbdev_install_quarto
 
 # Install pre-commit hooks into Git
-RUN pre-commit install
+RUN pre-commit install || echo "WARNING: pre-commit installation failed"
 
 # for running the workflow
 RUN python -m ipykernel install --user --name $(python3 --version | tr -d '[:space:]')
