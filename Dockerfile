@@ -30,4 +30,4 @@ RUN pre-commit install || echo "WARNING: pre-commit installation failed"
 # for running the workflow
 RUN python -m ipykernel install --user --name $(python3 --version | tr -d '[:space:]')
 
-ENTRYPOINT ["/bin/bash", "./entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
