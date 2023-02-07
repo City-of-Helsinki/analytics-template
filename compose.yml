@@ -8,6 +8,6 @@ services:
     environment:
       MODE: ${MODE:-jupyterlab}
     ports:
-      - 8888:8888 # jupyterlab
+      - 127.0.0.1:8888:8888 # jupyterlab
     volumes:
       - ./:/app
