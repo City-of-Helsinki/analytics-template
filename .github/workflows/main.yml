@@ -8,3 +8,5 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: Datahel/analytics_template@main
+        env:
+          MODE: ci-test
