@@ -7,6 +7,8 @@ jobs:
     env:
         working-directory: ./
     steps:
+      - run: pwd # will respect working-directory
+      - run: ls
       - name: Check notebooks
         id: nbdev_test
         #uses: Datahel/analytics_template@main
