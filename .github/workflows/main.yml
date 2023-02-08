@@ -10,6 +10,6 @@ jobs:
       - name: Check notebooks
         id: nbdev_test
         #uses: Datahel/analytics_template@main
-        uses: ./action.yml
+        uses: ./.github/actions/setup-composite
         env:
           MODE: ci-test
