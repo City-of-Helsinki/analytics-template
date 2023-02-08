@@ -8,6 +8,6 @@ jobs:
       - name: Check notebooks
         id: nbdev_test
         #uses: Datahel/analytics_template@main
-        uses: ./.github/actions/action.yml
+        uses: ./
         env:
           MODE: ci-test
