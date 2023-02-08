@@ -19,8 +19,10 @@ then
       git status -s # display the status to see which nbs need cleaning up
       if [[ `git status --porcelain -uno` ]]; then
         git status -uno
-        echo -e "!!! Detected unstripped out notebooks\n!!!Remember to install nbdev hooks to your environment using nbdev_install_hooks or execute nbdev_clean before commit."
+        echo -e "Test failed: Detected unstripped out notebooks\n! Remember to install nbdev hooks to your environment using nbdev_install_hooks or execute nbdev_clean before commit."
         false
+      else
+        echo "Success: Notebooks are cleaned properly"
       fi
 else
     echo "unknown mode: "$MODE", use 'dev', 'jupyterlab' or leave empty (defaults to 'dev')"
