@@ -4,6 +4,8 @@ jobs:
   ci_test_job:
     runs-on: ubuntu-latest
     name: Continuous integration tests
+    env:
+        working-directory: ./
     steps:
       - name: Check notebooks
         id: nbdev_test
