@@ -10,5 +10,3 @@ jobs:
       - name: Check notebooks
         id: container_self_test
         uses: ./.github/actions/run-container
-        env:
-          MODE: ci-test
