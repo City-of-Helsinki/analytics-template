@@ -8,7 +8,7 @@ jobs:
         working-directory: ./
     steps:
       - name: Check out repository
-          uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Check notebooks
         id: nbdev_test
         #uses: Datahel/analytics_template@main
