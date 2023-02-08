@@ -1,0 +1,6 @@
+# action.yml
+name: 'Run analytics container'
+description: 'Run repository tests in container using local dockerfile'
+runs:
+  using: 'docker'
+  image: '../../../Dockerfile'

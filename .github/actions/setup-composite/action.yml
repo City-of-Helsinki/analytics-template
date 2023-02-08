@@ -1,6 +1,0 @@
-# action.yml
-name: 'Run analytics container'
-description: 'Run repository container from dockerfile'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
