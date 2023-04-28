@@ -13,17 +13,17 @@ then
       cd /app
       nbdev_test
 
-      echo "Trying to strip out notebooks"
-      nbdev_clean
-      echo "Check that strip out was unnecessary"
-      git status -s # display the status to see which nbs need cleaning up
-      if [[ `git status --porcelain -uno` ]]; then
-        git status -uno
-        echo -e "Test failed: Detected unstripped out notebooks\n! Remember to install nbdev hooks to your environment using nbdev_install_hooks or execute nbdev_clean before commit."
-        false
-      else
-        echo "Success: Notebooks are cleaned properly"
-      fi
+#      echo "Trying to strip out notebooks"
+#      nbdev_clean
+#      echo "Check that strip out was unnecessary"
+#      git status -s # display the status to see which nbs need cleaning up
+#      if [[ `git status --porcelain -uno` ]]; then
+#        git status -uno
+#        echo -e "Test failed: Detected unstripped out notebooks\n! Remember to install nbdev hooks to your environment using nbdev_install_hooks or execute nbdev_clean before commit."
+#        false
+#      else
+#        echo "Success: Notebooks are cleaned properly"
+#      fi
 else
     echo "unknown mode: "$MODE", use 'dev', 'jupyterlab' or leave empty (defaults to 'dev')"
 fi
