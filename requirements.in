@@ -1,8 +1,7 @@
 # ML, data processing and other generic requirements
-black
+black[jupyter]
 numpy
 matplotlib
 pandas
 pip-tools
 seaborn
-nb-black
