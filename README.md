@@ -8,7 +8,7 @@ for your projects documentation.
 
 # Prerequisites
 
-python, pip, pip-tools
+Docker, GitHub Codespaces or Python >3.10
 
 Note: Default python version in this devcontainer is 3.10.6
 
@@ -100,6 +100,8 @@ This chapter describes how to use this repository template for data analytics.
 Store your local data under data-folder. It is excluded from version
 control to keep your data safe.
 
+TODO: tarkista mitä pitää tehdä kun päivittää riippuvuuksia codespacessa.
+
 ## Notebooks
 
 Do your analytics work in nbs/00_core.ipynb.
@@ -139,6 +141,12 @@ Run nbdev_clean to remove metadata from notebooks for cleaner commits.
 
 ## Dependencies
 
-Add library dependencies to requirements.in and use update_requirements.sh or 
-pip-compile to construct requirement.txt. File dev-requirements.in is
-intended for project development environment requirements. 
+Add library dependencies to requirements.in and use update_requirements.sh to construct requirement.txt. 
+File dev-requirements.in is intended for project development environment requirements. 
+
+### Notes to codespaces users
+
+Note that pip-compile in update_requirements.sh can fail due low memory.
+Then add requirement to requirements.in and install library manually: `pip install <library>`.
+
+When editing requirements files, make sure you enter empty line to end of the document to ensure your change will be saved to filesystem.
