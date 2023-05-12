@@ -100,8 +100,6 @@ This chapter describes how to use this repository template for data analytics.
 Store your local data under data-folder. It is excluded from version
 control to keep your data safe.
 
-TODO: tarkista mitä pitää tehdä kun päivittää riippuvuuksia codespacessa.
-
 ## Notebooks
 
 Do your analytics work in nbs/00_core.ipynb.
