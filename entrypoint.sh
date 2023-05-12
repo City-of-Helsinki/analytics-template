@@ -1,7 +1,8 @@
 #/bin/bash
-MODE=${MODE:-dev}
-if [[ $MODE = dev ]]
+MODE=${MODE:-vsc}
+if [[ $MODE = vsc ]]
 then
+     # leave container running. default for working with vsc (Visual Studio Code) and codespaces.
     tail -f /dev/null
 elif [[ $MODE = jupyterlab ]]
 then
@@ -25,5 +26,5 @@ then
         echo "Success: Notebooks are cleaned properly"
       fi
 else
-    echo "unknown mode: "$MODE", use 'dev', 'jupyterlab' or leave empty (defaults to 'dev')"
+    echo "unknown mode: "$MODE", use 'vsc', 'jupyterlab' or leave empty (defaults to 'vsc')"
 fi

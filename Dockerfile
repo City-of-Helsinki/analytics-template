@@ -8,6 +8,10 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends sudo c
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
 
+# blinker distutil install breaks dependencies, so remove it
+# it will be re-installed later from requirements
+RUN DEBIAN_FRONTEND=noninteractive sudo apt-get -y purge --auto-remove python3-blinker
+
 RUN mkdir /app
 
 COPY . /app
