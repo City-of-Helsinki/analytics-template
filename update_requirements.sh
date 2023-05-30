@@ -6,7 +6,7 @@
 
 # Requirements.txt generation
 echo "Generating new requirements.txt... please wait."
-pip-compile --upgrade --generate-hashes --allow-unsafe --resolver=backtracking -o requirements.txt requirements.in dev-requirements.in
+pip-compile --upgrade --generate-hashes --allow-unsafe --resolver=backtracking -o requirements.txt requirements.in dev-requirements.in || (echo "Pip compile failed. This might happen due low memory. Please check requirements.in and dev-requirements.in files. " && exit 1)
 
 # Add warning and info to newly generated file.
 HEADER=$(cat <<-END
@@ -24,6 +24,7 @@ HEADER=$(cat <<-END
 END
 )
 
+# Add header to requirements.txt
 echo -e $HEADER | cat - requirements.txt > temp && mv temp requirements.txt
 
 echo "New requirements.txt generated. You may install requirements to your environment by: pip install -r requirements.txt"
